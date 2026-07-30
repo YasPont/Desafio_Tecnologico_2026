@@ -1,4 +1,4 @@
-/* RESET DE ESTILOS & BOX-SIZING */
+
 * {
   margin: 0;
   padding: 0;
@@ -25,10 +25,9 @@ body {
 
 
 
-/* CONTAINER PRINCIPAL MOBILE-FIRST */
 .hero-section, .main-content, .footer {
   width: 100%;
-  max-width: 600px; /* Mantém a proporção mobile do Figma centralizada em telas maiores */
+  max-width: 600px; 
   margin: 0 auto;
   padding: 30px 20px;
 }
@@ -96,7 +95,6 @@ body {
   margin-top: 10px;
 }
 
-/* SEÇÕES GENÉRICAS */
 .section-title {
   font-weight: 700;
   font-size: 26px;
@@ -110,7 +108,7 @@ body {
   font-weight: 500;
   font-size: 17px;
   line-height: 1.5;
-  color: #C5C5C5; /* Ligeiramente mais claro que #828282 para melhor leitura no escuro */
+  color: #C5C5C5; 
 }
 
 
@@ -176,7 +174,7 @@ body {
 
 #mapa-interativo {
   width: 100%;
-  height: 360px; /* Altura ideal para navegação por toque em telas mobile */
+  height: 360px; 
 }
 
 .mapa-filtros {
@@ -262,7 +260,7 @@ body {
 
 
 
-/* FOOTER */
+/* RODAPE */
 .footer {
   background: #0B001C;
   text-align: center;
