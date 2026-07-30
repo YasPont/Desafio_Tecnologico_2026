@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // ATENÇÃO: QUANDO A SUA IMAGEM OFICIAL ESTIVER PRONTA, TROQUE O NOME ABAIXO:
   // Exemplo: 'planta-oficial-dtec.png'
   // =========================================================================
-  var image = L.imageOverlay('image.png', bounds).addTo(map);
+  var image = L.imageOverlay('src/mapa seara tematico.png', bounds).addTo(map);
   map.fitBounds(bounds);
 
   // 3. Grupos de Camadas para possibilitar os Filtros
