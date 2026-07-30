@@ -1,0 +1,63 @@
+document.addEventListener("DOMContentLoaded", function() {
+  
+  // 1. Inicializar o mapa na div #mapa-interativo (coordenadas de imagem)
+  var map = L.map('mapa-interativo', {
+    crs: L.CRS.Simple,
+    minZoom: -1,
+    maxZoom: 2,
+    zoomControl: true,
+    attributionControl: false
+  });
+
+  // 2. Dimensões virtuais da planta (Ex: 1920x1080)
+  var w = 1920, h = 1080;
+  var bounds = [[0, 0], [h, w]];
+
+  // =========================================================================
+  // ATENÇÃO: QUANDO A SUA IMAGEM OFICIAL ESTIVER PRONTA, TROQUE O NOME ABAIXO:
+  // Exemplo: 'planta-oficial-dtec.png'
+  // =========================================================================
+  var image = L.imageOverlay('image.png', bounds).addTo(map);
+  map.fitBounds(bounds);
+
+  // 3. Grupos de Camadas para possibilitar os Filtros
+  var estandesGroup = L.layerGroup().addTo(map);
+  var auditoriosGroup = L.layerGroup().addTo(map);
+
+  // 4. Mapear Estandes (Polígonos clicáveis sobre a imagem)
+  var estande1 = L.polygon([
+    [350, 400], [350, 650], [550, 650], [550, 400]
+  ], { 
+    color: '#E854C9', 
+    fillColor: '#E854C9', 
+    fillOpacity: 0.4,
+    weight: 2 
+  }).addTo(estandesGroup);
+  estande1.bindPopup("<b>Estande Principal</b><br>Exposição de Projetos RAITec");
+
+  // 5. Mapear Auditórios
+  var auditorio1 = L.polygon([
+    [700, 800], [700, 1150], [950, 1150], [950, 800]
+  ], { 
+    color: '#7B2FF7', 
+    fillColor: '#7B2FF7', 
+    fillOpacity: 0.4,
+    weight: 2 
+  }).addTo(auditoriosGroup);
+  auditorio1.bindPopup("<b>Auditório Principal</b><br>Palcos de Palestras e Abertura");
+
+  // 6. Função para acionar os filtros pelos botões na tela
+  window.filtrarMapa = function(categoria) {
+    map.removeLayer(estandesGroup);
+    map.removeLayer(auditoriosGroup);
+
+    if (categoria === 'todos') {
+      map.addLayer(estandesGroup);
+      map.addLayer(auditoriosGroup);
+    } else if (categoria === 'estandes') {
+      map.addLayer(estandesGroup);
+    } else if (categoria === 'auditorios') {
+      map.addLayer(auditoriosGroup);
+    }
+  };
+});
