@@ -60,6 +60,11 @@ document.addEventListener("DOMContentLoaded", function() {
   //    map.addLayer(auditoriosGroup);
    // }
  // };
+  
+  // Adicionar um pino usando a coordenada que você descobriu
+  var entrada = L.marker([372, 674]).addTo(map);
+  entrada.bindPopup("<b>FADAS</b>");
+  
   // FERRAMENTA DE DESENVOLVEDOR: Descobrir coordenadas ao clicar
   map.on('click', function(e) {
     var y = Math.round(e.latlng.lat);
