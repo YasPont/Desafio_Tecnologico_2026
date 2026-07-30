@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   // 2. Dimensões virtuais da planta (Ex: 1920x1080)
-  var w = 1920, h = 1080;
+  var w = 844, h = 589;
   var bounds = [[0, 0], [h, w]];
 
   // =========================================================================
