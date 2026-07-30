@@ -47,7 +47,7 @@ body {
   margin-bottom: 24px;
 }
 
-.hero-buttons {
+/*.hero-buttons {
   display: flex;
   justify-content: center;
   gap: 16px;
@@ -70,7 +70,7 @@ body {
 .btn-outline:active, .btn-outline:hover {
   background: #E854C9;
   color: #FFFFFF;
-}
+}*/
 
 .logo-dtec-container img, .organizador-box img {
   max-width: 80%;
