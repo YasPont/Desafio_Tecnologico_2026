@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -13,7 +13,7 @@
   <!-- Leaflet CSS (Mapa Interativo) -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
-  <!-- Estilo CSS Customizado -->
+  <!--  CSS  -->
   <link rel="stylesheet" href="CSS/estilo_dtec.css" />
 </head>
 <body>
@@ -31,13 +31,12 @@
     </div>
 
     <div class="logo-dtec-container">
-      <!-- Substitua pelo seu arquivo de logo: Logo + Logotipo - Variação 02.png -->
+      
       <img src="src/Logo + Logotipo - Variação 02 2.png" alt="Desafio Tecnológico" class="logo-dtec" />
     </div>
 
     <div class="organizador-box">
       <span class="sub-label">UMA ORGANIZAÇÃO</span>
-      <!-- Substitua pelo logo da RAITEC: NovaIdentidadeVisualRAITEC-11(1).png -->
       <img src="src/NovaIdentidadeVisualRAITEC-11(1) 2.png" alt="RAITEC" class="logo-raitec" />
       <span class="event-date">25 DE SETEMBRO 2026</span>
     </div>
@@ -63,11 +62,11 @@
 
       <!-- CONTÊINER DO MAPA INTERATIVO (LEAFLET) -->
       <div class="mapa-wrapper">
-        <div class="mapa-filtros">
-          <button onclick="filtrarMapa('todos')">Todos</button>
-          <button onclick="filtrarMapa('estandes')">Estandes</button>
-          <button onclick="filtrarMapa('auditorios')">Auditórios</button>
-        </div>
+        <!-- <div class="mapa-filtros"> -->
+          <!-- <button onclick="filtrarMapa('todos')">Todos</button> -->
+          <!-- <button onclick="filtrarMapa('estandes')">Estandes</button> -->
+          <!--  <button onclick="filtrarMapa('auditorios')">Auditórios</button> -->
+        <!-- </div>-->
         <div id="mapa-interativo"></div>
       </div>
     </section>
@@ -113,7 +112,7 @@
 
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <!-- Script do Site -->
+  
   <script src="js/js_dtec.js"></script>
 </body>
 </html>
