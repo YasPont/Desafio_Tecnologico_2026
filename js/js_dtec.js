@@ -9,118 +9,114 @@ document.addEventListener("DOMContentLoaded", function() {
     attributionControl: false
   });
 
-  // 2. Dimensões virtuais da planta DO EVENTO (Ex: 1920x1080)
-  var w = 844, h = 589;
+  // 2. Dimensões virtuais da planta DO EVENTO (nova planta baixa)
+  var w = 900, h = 570;
   var bounds = [[0, 0], [h, w]];
 
   // ATENÇÃO: para mudar a imagem do "mapa" é só colocar o caminho dentro das aspas: L.imageOverlay('...', bounds)
-  // Exemplo: 'planta-oficial-dtec.png'
-
-  var image = L.imageOverlay('src/mapa_seara_tematico.png', bounds).addTo(map);
+  var image = L.imageOverlay('src/mapa_final.png', bounds).addTo(map);
   map.fitBounds(bounds);
 
 
-// essa parte das camadas eu tirei, pois achei que ficava muito poluido com elas. se quiser de volta é so tirar os "//"
-
-  // 3. Grupos de Camadas para possibilitar os Filtros
-
-  //var estandesGroup = L.layerGroup().addTo(map);
-  //var auditoriosGroup = L.layerGroup().addTo(map);
-
-
-  // 4. Mapear Estandes (Polígonos clicáveis sobre a imagem)
-  
-  //var estande1 = L.polygon([
-   // [350, 400], [350, 650], [550, 650], [550, 400]
- // ], { 
-   // color: '#E854C9', 
-    //fillColor: '#E854C9', 
-   // fillOpacity: 0.4,
-   // weight: 2 
-  //}).addTo(estandesGroup);
- // estande1.bindPopup("<b>Estande Principal</b><br>Exposição de Projetos RAITec");
-
-
-  // 5. Mapear Auditórios
- 
-  //var auditorio1 = L.polygon([
-    //[700, 800], [700, 1150], [950, 1150], [950, 800]
-  //], { 
-//    color: '#7B2FF7', 
-//    fillColor: '#7B2FF7', 
-//    fillOpacity: 0.4,
-    //weight: 2 
-//  }).addTo(auditoriosGroup);
-  //auditorio1.bindPopup("<b>Auditório Principal</b><br>Palcos de Palestras e Abertura");
-
-
-
-  // 6. Função para acionar os filtros pelos botões na tela
-
-  //  window.filtrarMapa = function(categoria) {
-  //  map.removeLayer(estandesGroup);
-  //  map.removeLayer(auditoriosGroup);
-
-  //  if (categoria === 'todos') {
-  //    map.addLayer(estandesGroup);
-  //    map.addLayer(auditoriosGroup);
-  //  } else if (categoria === 'estandes') {
- //     map.addLayer(estandesGroup);
- //   } else if (categoria === 'auditorios') {
-  //    map.addLayer(auditoriosGroup);
-   // }
- // };
-
- 
-
-  // Adicionar um circulo de acordo com certa coordenada
-  var postoMedico = L.circleMarker([372, 674], {
-  radius: 8,            // tamanho do circulo (recomendo 5, 8, 10...)
-  color: '#FFFFFF',     // Cor da borda do círculo
-  weight: 2,            // Grossura da borda
-  fillColor: '#E854C9', // Cor de preenchimento 
-  fillOpacity: 0.5        // Opacidade (1 é sólido, 0.5 é meio transparente)
+  // 3. Marcadores (apenas os pop-ups, sem camadas/filtros)
+  var wcEsq = L.circleMarker([487, 293], {
+    radius: 8,
+    color: '#FFFFFF',
+    weight: 2,
+    fillColor: '#E854C9',
+    fillOpacity: 0.5
   }).addTo(map);
-  postoMedico.bindPopup("<b>FADA</b>");
+  wcEsq.bindPopup("<b>W.C.</b><br>Banheiro masculino e feminino.");
 
-
-  var postoMedico = L.circleMarker([104, 491], {
-  radius: 8,            // tamanho do circulo (recomendo 5, 8, 10...)
-  color: '#FFFFFF',     // Cor da borda do círculo
-  weight: 2,            // Grossura da borda
-  fillColor: '#E854C9', // Cor de preenchimento 
-  fillOpacity: 0.5        // Opacidade (1 é sólido, 0.5 é meio transparente)
+  var wcDir = L.circleMarker([257, 745], {
+    radius: 8,
+    color: '#FFFFFF',
+    weight: 2,
+    fillColor: '#E854C9',
+    fillOpacity: 0.5
   }).addTo(map);
-  postoMedico.bindPopup("<b>PALCO</b>");
+  wcDir.bindPopup("<b>W.C.</b><br>Banheiro masculino e feminino.");
 
-  var postoMedico = L.circleMarker([302, 731], {
-  radius: 8,            // tamanho do circulo (recomendo 5, 8, 10...)
-  color: '#FFFFFF',     // Cor da borda do círculo
-  weight: 2,            // Grossura da borda
-  fillColor: '#E854C9', // Cor de preenchimento 
-  fillOpacity: 0.5        // Opacidade (1 é sólido, 0.5 é meio transparente)
+  var diretoria = L.circleMarker([485, 491], {
+    radius: 8,
+    color: '#FFFFFF',
+    weight: 2,
+    fillColor: '#E854C9',
+    fillOpacity: 0.5
   }).addTo(map);
-  postoMedico.bindPopup("<b>ZUMBI</b>");
+  diretoria.bindPopup("<b>Diretoria</b><br>Sala da diretoria.");
 
-  var postoMedico = L.circleMarker([87, 608], {
-  radius: 8,            // tamanho do circulo (recomendo 5, 8, 10...)
-  color: '#FFFFFF',     // Cor da borda do círculo
-  weight: 2,            // Grossura da borda
-  fillColor: '#E854C9', // Cor de preenchimento 
-  fillOpacity: 0.5        // Opacidade (1 é sólido, 0.5 é meio transparente)
+  var confucio = L.circleMarker([301, 151], {
+    radius: 8,
+    color: '#FFFFFF',
+    weight: 2,
+    fillColor: '#E854C9',
+    fillOpacity: 0.5
   }).addTo(map);
-  postoMedico.bindPopup("<b>INSCRIÇÕES</b>");
+  confucio.bindPopup("<b>Instituto Confúcio</b><br>Espaço do Instituto Confúcio.");
 
+  var patio = L.circleMarker([315, 319], {
+    radius: 8,
+    color: '#FFFFFF',
+    weight: 2,
+    fillColor: '#E854C9',
+    fillOpacity: 0.5
+  }).addTo(map);
+  patio.bindPopup("<b>Pátio</b><br>Área central de convivência.");
+
+  var seara = L.circleMarker([327, 567], {
+    radius: 8,
+    color: '#FFFFFF',
+    weight: 2,
+    fillColor: '#E854C9',
+    fillOpacity: 0.5
+  }).addTo(map);
+  seara.bindPopup("<b>Espaço SEARA</b>");
+
+  var exposicao = L.circleMarker([373, 689], {
+    radius: 8,
+    color: '#FFFFFF',
+    weight: 2,
+    fillColor: '#E854C9',
+    fillOpacity: 0.5
+  }).addTo(map);
+  exposicao.bindPopup("<b>Exposição de Projetos</b>");
+
+  var oficinas = L.circleMarker([121, 281], {
+    radius: 8,
+    color: '#FFFFFF',
+    weight: 2,
+    fillColor: '#E854C9',
+    fillOpacity: 0.5
+  }).addTo(map);
+  oficinas.bindPopup("<b>Oficinas</b><br>Salas de oficinas.");
+
+  var auditorio = L.circleMarker([95, 491], {
+    radius: 8,
+    color: '#FFFFFF',
+    weight: 2,
+    fillColor: '#E854C9',
+    fillOpacity: 0.5
+  }).addTo(map);
+  auditorio.bindPopup("<b>Auditório</b><br>Auditório principal.");
+
+  var entrada = L.circleMarker([117, 685], {
+    radius: 8,
+    color: '#FFFFFF',
+    weight: 2,
+    fillColor: '#E854C9',
+    fillOpacity: 0.5
+  }).addTo(map);
+  entrada.bindPopup("<b>Entrada</b><br>Entrada principal do prédio.");
 
 
   // FERRAMENTA DE DESENVOLVEDOR: Descobrir coordenadas ao clicar
-  
-//  map.on('click', function(e) {
-//    var y = Math.round(e.latlng.lat);
-//    var x = Math.round(e.latlng.lng);
-    
-    // Mostra um aviso na tela com as coordenadas exatas
-//    alert("Coordenada: [" + y + ", " + x + "]");
-//    console.log("Coordenada copiada: [" + y + ", " + x + "]");
-//  });
+  // Deixe descomentado para ajustar a posição de cada marcador clicando na imagem
+
+  map.on('click', function(e) {
+    var y = Math.round(e.latlng.lat);
+    var x = Math.round(e.latlng.lng);
+    alert("Coordenada: [" + y + ", " + x + "]");
+    console.log("Coordenada copiada: [" + y + ", " + x + "]");
+  });
 });
