@@ -113,10 +113,10 @@ document.addEventListener("DOMContentLoaded", function() {
   // FERRAMENTA DE DESENVOLVEDOR: Descobrir coordenadas ao clicar
   // Deixe descomentado para ajustar a posição de cada marcador clicando na imagem
 
-  map.on('click', function(e) {
+  /*map.on('click', function(e) {
     var y = Math.round(e.latlng.lat);
     var x = Math.round(e.latlng.lng);
     alert("Coordenada: [" + y + ", " + x + "]");
     console.log("Coordenada copiada: [" + y + ", " + x + "]");
   });
-});
+});*/
