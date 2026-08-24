@@ -14,11 +14,8 @@ document.addEventListener("DOMContentLoaded", function() {
   var bounds = [[0, 0], [h, w]];
 
   // ATENÇÃO: para mudar a imagem do "mapa" é só colocar o caminho dentro das aspas: L.imageOverlay('...', bounds)
-<<<<<<< HEAD
-  var image = L.imageOverlay('IMAGES/mapa_final.png', bounds).addTo(map);
-=======
-  var image = L.imageOverlay('src/mapa_final.png', bounds).addTo(map);
->>>>>>> e12223e790ef056844166c20d38809ecdc474486
+  var image = L.imageOverlay('src/mapa_final_Dtec_cópia.png', bounds).addTo(map);
+
   map.fitBounds(bounds);
 
 
@@ -116,20 +113,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // FERRAMENTA DE DESENVOLVEDOR: Descobrir coordenadas ao clicar
   // Deixe descomentado para ajustar a posição de cada marcador clicando na imagem
-<<<<<<< HEAD
-=======
-
->>>>>>> e12223e790ef056844166c20d38809ecdc474486
   /*map.on('click', function(e) {
     var y = Math.round(e.latlng.lat);
     var x = Math.round(e.latlng.lng);
     alert("Coordenada: [" + y + ", " + x + "]");
     console.log("Coordenada copiada: [" + y + ", " + x + "]");
-<<<<<<< HEAD
   });*/
 
 });
-=======
-  });
-});*/
->>>>>>> e12223e790ef056844166c20d38809ecdc474486
