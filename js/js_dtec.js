@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   // 3. Marcadores (apenas os pop-ups, sem camadas/filtros)
+  /*
   var wcEsq = L.circleMarker([487, 293], {
     radius: 8,
     color: '#FFFFFF',
@@ -113,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // FERRAMENTA DE DESENVOLVEDOR: Descobrir coordenadas ao clicar
   // Deixe descomentado para ajustar a posição de cada marcador clicando na imagem
-  /*map.on('click', function(e) {
+    map.on('click', function(e) {
     var y = Math.round(e.latlng.lat);
     var x = Math.round(e.latlng.lng);
     alert("Coordenada: [" + y + ", " + x + "]");
